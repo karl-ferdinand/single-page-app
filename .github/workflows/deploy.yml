@@ -16,7 +16,7 @@ permissions:
 
 jobs:
   test-workflow:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     container: hashicorp/terraform:latest
     steps:
       - name: Checkout repo
