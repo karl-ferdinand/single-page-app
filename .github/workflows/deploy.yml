@@ -47,6 +47,10 @@ jobs:
           terraform validate
 
       - name: Terraform plan
+        env:
+          TF_VAR_subnet_id_a: ${{ secrets.SUBNET_A }}
+          TF_VAR_subnet_id_b: ${{ secrets.SUBNET_B }}
+          TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
         run: |
           terraform plan \
             -var-file config/${{ env.APP_NAME }}.tfvars \
@@ -54,6 +58,10 @@ jobs:
 
       - name: Terraform apply
         if: ${{ github.ref_name == 'main' }}
+        env:
+          TF_VAR_subnet_id_a: ${{ secrets.SUBNET_A }}
+          TF_VAR_subnet_id_b: ${{ secrets.SUBNET_B }}
+          TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
         run: |
           terraform apply \
             -auto-approve \
