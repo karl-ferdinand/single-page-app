@@ -29,4 +29,3 @@ resource "aws_eks_access_policy_association" "deploy_principal_policy" {
     type = "cluster"
   }
 }
-
