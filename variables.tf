@@ -7,7 +7,7 @@ variable "bucket_name" {
 variable "eks_cluster_name" {
   description = "Name of EKS cluster"
   type        = string
-  default     = "inflate_cluster"
+  default     = "inflate-cluster"
 }
 
 variable "subnet_id_a" {
