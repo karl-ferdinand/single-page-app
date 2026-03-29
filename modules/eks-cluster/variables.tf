@@ -20,3 +20,9 @@ variable "subnet_id_c" {
   type        = string
   sensitive   = true
 }
+
+variable "iam_principal" {
+  description = "ARN of IAM principal to access EKS cluster"
+  type        = string
+  sensitive   = true
+}
