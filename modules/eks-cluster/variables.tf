@@ -1,9 +1,3 @@
-variable "bucket_name" {
-  description = "Name of S3 bucket"
-  type        = string
-  default     = "single-page-app-html"
-}
-
 variable "eks_cluster_name" {
   description = "Name of EKS cluster"
   type        = string
