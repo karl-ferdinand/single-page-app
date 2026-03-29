@@ -15,7 +15,7 @@ resource "kubernetes_deployment" "inflate" {
       spec {
         termination_grace_period_seconds = 0
         node_selector = {
-          eks.amazonaws.com / compute-type = "auto"
+          eks.amazonaws.com/compute-type = "auto"
         }
         security_context {
           run_as_user  = 1000
