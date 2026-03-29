@@ -1,4 +1,4 @@
-resource "kubernetes_deployment" "inflate" {
+resource "kubernetes_deployment_v1" "inflate" {
   metadata {
     name = "inflate"
   }
