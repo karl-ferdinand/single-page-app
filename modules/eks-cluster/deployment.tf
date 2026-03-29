@@ -15,12 +15,12 @@ resource "kubernetes_deployment" "inflate" {
       spec {
         termination_grace_period_seconds = 0
         node_selector = {
-          eks.amazonaws.com/compute-type = "auto"
+          eks.amazonaws.com / compute-type = "auto"
         }
         security_context {
-          run_as_user     = 1000
+          run_as_user  = 1000
           run_as_group = 3000
-          fs_group = 2000
+          fs_group     = 2000
         }
         container {
           image = "public.ecr.aws/eks-distro/kubernetes/pause:3.7"
