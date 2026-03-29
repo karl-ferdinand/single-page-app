@@ -33,3 +33,9 @@ variable "iam_principal" {
   type        = string
   sensitive   = true
 }
+
+# variable "deploy_principal" {
+#   description = "ARN of IAM principal to deploy to EKS cluster"
+#   type        = string
+#   sensitive   = true
+# }

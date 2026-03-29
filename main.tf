@@ -35,4 +35,5 @@ module "eks_cluster" {
   subnet_id_b      = var.subnet_id_b
   subnet_id_c      = var.subnet_id_c
   iam_principal    = var.iam_principal
+  # deploy_principal = var.deploy_principal
 }

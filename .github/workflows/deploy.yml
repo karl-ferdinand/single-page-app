@@ -52,6 +52,7 @@ jobs:
           TF_VAR_subnet_id_b: ${{ secrets.SUBNET_B }}
           TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
           TF_VAR_iam_principal: ${{ secrets.EKS_IAM_PRINCIPAL }}
+          # TF_VAR_deploy_principal: ${{ secrets.EKS_DEPLOY_PRINCIPAL}}
         run: |
           terraform plan \
             -var-file config/${{ env.APP_NAME }}.tfvars \
@@ -64,6 +65,7 @@ jobs:
           TF_VAR_subnet_id_b: ${{ secrets.SUBNET_B }}
           TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
           TF_VAR_iam_principal: ${{ secrets.EKS_IAM_PRINCIPAL }}
+          # TF_VAR_deploy_principal: ${{ secrets.EKS_DEPLOY_PRINCIPAL}}
         run: |
           terraform apply \
             -auto-approve \
