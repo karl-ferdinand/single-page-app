@@ -4,6 +4,6 @@ data "aws_eks_cluster_auth" "this" {
 
 provider "kubernetes" {
   host                   = aws_eks_cluster.eks_cluster.endpoint
-  cluster_ca_certificate = aws_eks_cluster.eks_cluster.certificate_authority.data
+  cluster_ca_certificate = base64decode(aws_eks_cluster.eks_cluster.certificate_authority)
   token                  = data.aws_eks_cluster_auth.this.token
 }
