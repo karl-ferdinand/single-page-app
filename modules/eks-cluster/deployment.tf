@@ -23,7 +23,7 @@ resource "kubernetes_deployment_v1" "inflate" {
           fs_group     = 2000
         }
         container {
-          image = "public.ecr.aws/eks-distro/kubernetes/pause:3.7"
+          image = "public.ecr.aws/eks-distro/kubernetes/pause:3.10"
           name  = "inflate"
           resources {
             requests = { cpu = "1" }
