@@ -15,6 +15,9 @@ def lambda_handler(event, context):
     elif "Windows" in user_agent['value']:
         print("On a Windows device")
         request['uri'] = "/windows.html"
+    elif "Macintosh" in user_agent['value']:
+        print("On a Mac machine")
+        request['uri'] = "/mac.html"
     else:
         print("On neither Linux nor Windows")
         request['uri'] = "/index.html"
