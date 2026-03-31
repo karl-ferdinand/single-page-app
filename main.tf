@@ -24,10 +24,12 @@ provider "aws" {
 }
 
 module "single_page_app" {
-  source        = "./modules/single-page-app"
-  bucket_name   = var.bucket_name
-  s3_origin_id  = var.s3_origin_id
-  function_name = var.function_name
+  source             = "./modules/single-page-app"
+  bucket_name        = var.bucket_name
+  s3_origin_id       = var.s3_origin_id
+  function_name      = var.function_name
+  topic_name         = var.topic_name
+  notification_email = var.notification_email
 }
 
 # module "eks_cluster" {
