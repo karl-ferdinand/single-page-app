@@ -3,7 +3,8 @@ resource "aws_cloudwatch_metric_alarm" "cloudfront_5xx_alarm" {
   alarm_name          = "cloudfront-5xx-alarm"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 5
-  metric_name         = "5xxErrorRate"
+  # metric_name         = "5xxErrorRate"
+  metric_name         = "Requests"
   namespace           = "AWS/CloudFront"
   period              = 60
   statistic           = "Average"
@@ -26,7 +27,8 @@ resource "aws_cloudwatch_metric_alarm" "lambda_edge_errors_alarm" {
   alarm_name          = "lambda-edge-errors-alarm"
   comparison_operator = "GreaterThanThreshold"
   evaluation_periods  = 3
-  metric_name         = "LambdaExecutionErrors"
+  # metric_name         = "LambdaExecutionErrors"
+  metric_name         = "Invocation"
   namespace           = "AWS/CloudFront"
   period              = 60
   statistic           = "Sum"
