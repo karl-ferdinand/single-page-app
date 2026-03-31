@@ -90,4 +90,4 @@ jobs:
 
       - name: Upload html
         run: |
-          aws s3 sync html/ s3://single-page-app-html/ --recursive
+          aws s3 sync html/ s3://single-page-app-html/
