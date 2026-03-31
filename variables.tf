@@ -4,6 +4,12 @@ variable "bucket_name" {
   default     = "single-page-app-html"
 }
 
+variable "s3_origin_id" {
+  description = "Name of S3 origin"
+  type        = string
+  default     = "s3-origin"
+}
+
 variable "eks_cluster_name" {
   description = "Name of EKS cluster"
   type        = string

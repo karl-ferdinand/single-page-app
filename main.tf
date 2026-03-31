@@ -24,8 +24,9 @@ provider "aws" {
 }
 
 module "single_page_app" {
-  source      = "./modules/single-page-app"
-  bucket_name = var.bucket_name
+  source       = "./modules/single-page-app"
+  bucket_name  = var.bucket_name
+  s3_origin_id = var.s3_origin_id
 }
 
 # module "eks_cluster" {
