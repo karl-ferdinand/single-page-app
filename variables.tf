@@ -16,6 +16,18 @@ variable "function_name" {
   default     = "single-page-lambda-function"
 }
 
+variable "topic_name" {
+  description = "Name of SNS topic"
+  type        = string
+  default     = "error-notification"
+}
+
+variable "notification_email" {
+  description = "Email for notification"
+  type        = string
+  sensitive   = true
+}
+
 variable "eks_cluster_name" {
   description = "Name of EKS cluster"
   type        = string
