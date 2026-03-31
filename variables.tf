@@ -10,6 +10,12 @@ variable "s3_origin_id" {
   default     = "s3-origin"
 }
 
+variable "function_name" {
+  description = "Name of Lambda function"
+  type        = string
+  default     = "single-page-lambda-function"
+}
+
 variable "eks_cluster_name" {
   description = "Name of EKS cluster"
   type        = string

@@ -71,3 +71,23 @@ jobs:
             -auto-approve \
             -var-file config/${{ env.APP_NAME }}.tfvars \
             tfplan
+
+  upload-html:
+    if: ${{ github.ref_name == 'main' }}
+    runs-on: ubuntu-latest
+    needs: plan-deploy-infrastructure
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.ASSUME_ROLE }}
+          role-duration-seconds: 900
+          role-skip-session-tagging: true
+          aws-region: ap-southeast-2
+
+      - name: Upload html
+        run: |
+          aws s3 cp html/ s3://single-page-app-html/ --recursive
