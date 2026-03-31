@@ -8,6 +8,7 @@ resource "aws_cloudwatch_metric_alarm" "cloudfront_5xx_alarm" {
   period              = 60
   statistic           = "Average"
   threshold           = 5
+  treat_missing_data  = "notBreaching"
   alarm_description   = "This metric monitors cloudfront 5xx errors"
 
   dimensions = {
@@ -30,6 +31,7 @@ resource "aws_cloudwatch_metric_alarm" "lambda_edge_errors_alarm" {
   period              = 60
   statistic           = "Sum"
   threshold           = 3
+  treat_missing_data  = "notBreaching"
   alarm_description   = "This metric monitors lambda errors"
 
   dimensions = {
