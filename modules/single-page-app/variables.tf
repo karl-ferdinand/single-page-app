@@ -16,7 +16,6 @@ variable "function_name" {
 variable "topic_name" {
   description = "Name of SNS topic"
   type        = string
-  sensitive   = true
 }
 
 variable "notification_email" {

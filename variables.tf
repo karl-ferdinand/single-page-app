@@ -20,7 +20,6 @@ variable "topic_name" {
   description = "Name of SNS topic"
   type        = string
   default     = "error-notification"
-  sensitive   = true
 }
 
 variable "notification_email" {
