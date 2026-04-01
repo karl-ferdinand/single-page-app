@@ -25,6 +25,7 @@ jobs:
       TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
       TF_VAR_iam_principal: ${{ secrets.EKS_IAM_PRINCIPAL }}
       TF_VAR_deploy_principal: ${{ secrets.EKS_DEPLOY_PRINCIPAL}}
+      TF_VAR_topic_name: ${{ secrets.TOPIC_NAME }}
       TF_VAR_notification_email: ${{ secrets.NOTIFICATION_EMAIL }}
     steps:
       - name: Checkout repo
