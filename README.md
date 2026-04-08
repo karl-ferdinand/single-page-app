@@ -23,7 +23,3 @@ Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](https://d37q5v
 
 ## Architecture Diagram
 ![Architecture diagram](/documentation/architecture-diagram.png)
-
-**Legend**:
-- Blue lines: user traffic
-- Green lines: non-user traffic.
