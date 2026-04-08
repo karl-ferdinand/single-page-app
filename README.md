@@ -1,5 +1,5 @@
 # single-page-app
-CI/CD pipeline to deploy AWS infrastructure hosting single page app.
+CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will return different outputs in the browser depending on the operating system of the user.
 
 ## AWS Resources Deployed
 - **S3**: Stores relevant single page app HTML files.
