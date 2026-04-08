@@ -9,8 +9,9 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will re
 - **SNS**: Notifies email address when an alarm is triggered.
 
 ## AWS Regions Used
-- **ap-southeast-2**: Bulk of the resources are deployed here.
-- **us-east-1**: CloudWatch alarms and SNS topics created here.
+- **ap-southeast-2**: S3.
+- **us-east-1**: CloudWatch alarms, Lambda function and SNS topics.
+- **global**: CloudFront.
 
 ## Toolings Used
 - **GitHub Actions**: Builds CI/CD pipeline to deploy AWS infrastructure.
