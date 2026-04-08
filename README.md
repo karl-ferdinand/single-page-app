@@ -14,5 +14,5 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app.
 - **Python**: Lambda function to process incoming CloudFront request.
 
 ## Sample App Output
-Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](d37q5v94kvzh82.cloudfront.net)
-![Sample app output](/documentation/sample-app-output.png)
+Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](https://d37q5v94kvzh82.cloudfront.net/)
+![Sample app output](/documentation/sample-output.png)
