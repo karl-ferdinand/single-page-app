@@ -12,8 +12,3 @@ output "function_name" {
   description = "Name of Lambda function"
   value       = module.single_page_app.function_name
 }
-
-# output "eks_cluster_name" {
-#   description = "Name of EKS cluster"
-#   value       = module.eks_cluster.eks_cluster_name
-# }

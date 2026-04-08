@@ -6,9 +6,15 @@ on:
   pull_request:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - '**.png'
   push:
     branches:
       - main
+    paths-ignore:
+      - '**.md'
+      - '**.png'
 
 permissions:
   id-token: write
@@ -20,11 +26,6 @@ jobs:
     container: hashicorp/terraform:1.14
     env:
       APP_NAME: single-page-app
-      TF_VAR_subnet_id_a: ${{ secrets.SUBNET_A }}
-      TF_VAR_subnet_id_b: ${{ secrets.SUBNET_B }}
-      TF_VAR_subnet_id_c: ${{ secrets.SUBNET_C }}
-      TF_VAR_iam_principal: ${{ secrets.EKS_IAM_PRINCIPAL }}
-      TF_VAR_deploy_principal: ${{ secrets.EKS_DEPLOY_PRINCIPAL}}
       TF_VAR_notification_email: ${{ secrets.NOTIFICATION_EMAIL }}
     steps:
       - name: Checkout repo
