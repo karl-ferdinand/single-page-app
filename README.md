@@ -20,3 +20,7 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will re
 ## Sample App Output
 Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](https://d37q5v94kvzh82.cloudfront.net/). Use different operating systems to test different outputs.
 ![Sample app output](/documentation/sample-output.png)
+
+## Architecture Diagram
+Blue lines show user traffic. Green lines show non-user traffic.
+![Architecture diagram](/documentation/architecture-diagram.png)
