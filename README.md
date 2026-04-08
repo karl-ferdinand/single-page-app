@@ -1,6 +1,10 @@
 # single-page-app
 CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will return different outputs in the browser depending on the operating system of the user.
 
+## Sample App Output
+Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](https://d37q5v94kvzh82.cloudfront.net/). Use different operating systems to test different outputs.
+![Sample app output](/documentation/sample-output.png)
+
 ## AWS Resources Deployed
 - **S3**: Stores relevant single page app HTML files.
 - **CloudFront**: Distribution to serve relevant HTML file.
@@ -17,12 +21,8 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will re
 - **Terraform**: Automates AWS infrastructure deployment.
 - **Python**: Lambda function to process incoming CloudFront request.
 
-## Sample App Output
-Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](https://d37q5v94kvzh82.cloudfront.net/). Use different operating systems to test different outputs.
-![Sample app output](/documentation/sample-output.png)
-
 ## Architecture Diagram
+![Architecture diagram](/documentation/architecture-diagram.png)
 **Legend**:
 - Blue lines: user traffic
 - Green lines: non-user traffic.
-![Architecture diagram](/documentation/architecture-diagram.png)
