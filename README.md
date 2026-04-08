@@ -12,3 +12,7 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app.
 - **GitHub Actions**: Builds CI/CD pipeline to deploy AWS infrastructure.
 - **Terraform**: Automates AWS infrastructure deployment.
 - **Python**: Lambda function to process incoming CloudFront request.
+
+## Sample App Output
+Access CloudFront at this domain: [d37q5v94kvzh82.cloudfront.net](d37q5v94kvzh82.cloudfront.net)
+![Sample app output](/documentation/sample-app-output.png)
