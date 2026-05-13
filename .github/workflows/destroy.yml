@@ -39,7 +39,7 @@ jobs:
 
       - name: Terraform update state
         run: |
-          terraform state rm aws_lambda_function.lambda_function || true
+          terraform state rm module.single_page_app.aws_lambda_function.lambda_function || true
 
       - name: Terraform destroy
         run: |
