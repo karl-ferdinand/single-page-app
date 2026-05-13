@@ -1,0 +1,42 @@
+name: CI/CD pipeline to destroy AWS resources
+run-name: ${{ github.workflow }} from ${{ github.ref_name }}
+
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  plan-deploy-infrastructure:
+    runs-on: ubuntu-latest
+    container: hashicorp/terraform:1.14
+    env:
+      APP_NAME: single-page-app
+      TF_VAR_notification_email: ${{ secrets.NOTIFICATION_EMAIL }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: ${{ secrets.ASSUME_ROLE }}
+          role-duration-seconds: 900
+          role-skip-session-tagging: true
+          aws-region: ap-southeast-2
+      
+      - name: Terraform format check
+        run: |
+          terraform fmt -recursive -diff
+
+      - name: Terraform init
+        run: |
+          terraform init \
+            -backend-config bucket=${{ secrets.TF_BUCKET }} \
+            -backend-config key=terraform.tfstate
+
+      - name: Terraform destroy
+        run: |
+          terraform destroy -auto-approve
