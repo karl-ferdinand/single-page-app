@@ -7,7 +7,7 @@ CI/CD pipeline to deploy AWS infrastructure hosting single page app. App will re
 ## AWS Resources Deployed
 - **S3**: Stores relevant single page app HTML files.
 - **CloudFront**: Distribution to serve relevant HTML file.
-- **Lambda**: Python Lambda function to serve different HTML file depending on user's operating system.
+- **Lambda**: Python Lambda@Edge function to serve different HTML file depending on user's operating system.
 - **CloudWatch**: Alarms to monitor 5xx errors on CloudFront and Lambda execution errors.
 - **SNS**: Notifies email address when an alarm is triggered.
 
