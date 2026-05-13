@@ -37,6 +37,10 @@ jobs:
             -backend-config bucket=${{ secrets.TF_BUCKET }} \
             -backend-config key=terraform.tfstate
 
+      - name: Terraform update state
+        run: |
+          terraform state rm aws_lambda_function.lambda_function || true
+
       - name: Terraform destroy
         run: |
           terraform destroy -auto-approve
